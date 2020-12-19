@@ -338,8 +338,8 @@ public class SleepingBag : DecayEntity
 		}
 	}
 
-	[RPC_Server.IsVisible(3f)]
 	[RPC_Server]
+	[RPC_Server.IsVisible(3f)]
 	public void AssignToFriend(RPCMessage msg)
 	{
 		if (msg.player.CanInteract() && deployerUserID == msg.player.userID)
@@ -373,8 +373,8 @@ public class SleepingBag : DecayEntity
 		}
 	}
 
-	[RPC_Server.IsVisible(3f)]
 	[RPC_Server]
+	[RPC_Server.IsVisible(3f)]
 	public void RPC_MakeBed(RPCMessage msg)
 	{
 		if (canBePublic && IsPublic() && msg.player.CanInteract())

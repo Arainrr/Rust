@@ -68,8 +68,7 @@ public class CustomTimerSwitch : TimerSwitch
 	{
 		if (CanPlayerAdmin(msg.player))
 		{
-			int num = msg.read.Int32();
-			timerLength = num;
+			float num = timerLength = msg.read.Float();
 			SendNetworkUpdate();
 		}
 	}

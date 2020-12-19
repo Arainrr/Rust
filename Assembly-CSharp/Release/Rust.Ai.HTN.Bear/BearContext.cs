@@ -9,8 +9,8 @@ namespace Rust.Ai.HTN.Bear
 	{
 		public delegate void WorldStateChangedEvent(BearContext context, Facts fact, byte oldValue, byte newValue);
 
-		[ReadOnly]
 		[SerializeField]
+		[ReadOnly]
 		public bool _isWorldStateDirty;
 
 		[SerializeField]
@@ -24,8 +24,8 @@ namespace Rust.Ai.HTN.Bear
 		[ReadOnly]
 		private int _decompositionScore;
 
-		[ReadOnly]
 		[SerializeField]
+		[ReadOnly]
 		private List<PrimitiveTaskSelector> _debugPlan;
 
 		private static Stack<WorldStateInfo>[] _worldStateChanges;

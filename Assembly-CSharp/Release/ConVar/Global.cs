@@ -21,8 +21,8 @@ namespace ConVar
 		[ClientVar]
 		public static int maxthreads = 8;
 
-		[ServerVar(Saved = true)]
 		[ClientVar(Saved = true)]
+		[ServerVar(Saved = true)]
 		public static int perf = 0;
 
 		[ClientVar(ClientInfo = true, Saved = true, Help = "If you're an admin this will enable god mode")]
@@ -69,8 +69,8 @@ namespace ConVar
 			ServerPerformance.DoReport();
 		}
 
-		[ClientVar]
 		[ServerVar]
+		[ClientVar]
 		public static void objects(Arg args)
 		{
 			UnityEngine.Object[] array = UnityEngine.Object.FindObjectsOfType<UnityEngine.Object>();
@@ -109,8 +109,8 @@ namespace ConVar
 			args.ReplyWith(text);
 		}
 
-		[ClientVar]
 		[ServerVar]
+		[ClientVar]
 		public static void textures(Arg args)
 		{
 			UnityEngine.Texture[] array = UnityEngine.Object.FindObjectsOfType<UnityEngine.Texture>();
@@ -138,8 +138,8 @@ namespace ConVar
 			args.ReplyWith(strValue);
 		}
 
-		[ClientVar]
 		[ServerVar]
+		[ClientVar]
 		public static void error(Arg args)
 		{
 			((GameObject)null).transform.position = Vector3.zero;
@@ -431,8 +431,8 @@ namespace ConVar
 			basePlayer.Teleport(worldPosition);
 		}
 
-		[ServerVar]
 		[ClientVar]
+		[ServerVar]
 		public static void free(Arg args)
 		{
 			Pool.clear_prefabs(args);
@@ -442,22 +442,22 @@ namespace ConVar
 			GC.unload();
 		}
 
-		[ServerVar(ServerUser = true)]
 		[ClientVar]
+		[ServerVar(ServerUser = true)]
 		public static void version(Arg arg)
 		{
 			arg.ReplyWith($"Protocol: {Protocol.printable}\nBuild Date: {BuildInfo.Current.BuildDate}\nUnity Version: {UnityEngine.Application.unityVersion}\nChangeset: {BuildInfo.Current.Scm.ChangeId}\nBranch: {BuildInfo.Current.Scm.Branch}");
 		}
 
-		[ClientVar]
 		[ServerVar]
+		[ClientVar]
 		public static void sysinfo(Arg arg)
 		{
 			arg.ReplyWith(SystemInfoGeneralText.currentInfo);
 		}
 
-		[ClientVar]
 		[ServerVar]
+		[ClientVar]
 		public static void sysuid(Arg arg)
 		{
 			arg.ReplyWith(SystemInfo.deviceUniqueIdentifier);

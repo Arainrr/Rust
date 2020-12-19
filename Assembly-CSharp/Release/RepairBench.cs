@@ -147,8 +147,8 @@ public class RepairBench : StorageContainer
 		}
 	}
 
-	[RPC_Server.IsVisible(3f)]
 	[RPC_Server]
+	[RPC_Server.IsVisible(3f)]
 	public void ChangeSkin(RPCMessage msg)
 	{
 		if (UnityEngine.Time.realtimeSinceStartup < nextSkinChangeTime)
@@ -192,10 +192,12 @@ public class RepairBench : StorageContainer
 				flag2 = (num != 0);
 			}
 			float condition = slot.condition;
+			float maxCondition = slot.maxCondition;
 			slot.Remove();
 			ItemManager.DoRemoves();
 			Item item = ItemManager.Create(template, 1, 0uL);
 			item.MoveToContainer(base.inventory, 0, false);
+			item.maxCondition = maxCondition;
 			item.condition = condition;
 			if (flag2)
 			{
@@ -206,10 +208,12 @@ public class RepairBench : StorageContainer
 		{
 			ItemDefinition isRedirectOf = slot.info.isRedirectOf;
 			float condition2 = slot.condition;
+			float maxCondition2 = slot.maxCondition;
 			slot.Remove();
 			ItemManager.DoRemoves();
 			Item item2 = ItemManager.Create(isRedirectOf, 1, Skin);
 			item2.MoveToContainer(base.inventory, 0, false);
+			item2.maxCondition = maxCondition2;
 			item2.condition = condition2;
 		}
 		else
@@ -234,8 +238,8 @@ public class RepairBench : StorageContainer
 		}
 	}
 
-	[RPC_Server]
 	[RPC_Server.IsVisible(3f)]
+	[RPC_Server]
 	public void RepairItem(RPCMessage msg)
 	{
 		Item slot = base.inventory.GetSlot(0);
@@ -251,7 +255,19 @@ public class RepairBench : StorageContainer
 		}
 		ItemDefinition info = itemToRepair.info;
 		ItemBlueprint component = info.GetComponent<ItemBlueprint>();
-		if (!component || !info.condition.repairable || itemToRepair.condition == itemToRepair.maxCondition || (mustKnowBlueprint && !player.blueprints.HasUnlocked(info) && (!(info.Blueprint != null) || info.Blueprint.isResearchable)) || Interface.CallHook("OnItemRepair", player, itemToRepair) != null)
+		if (!component || !info.condition.repairable || itemToRepair.condition == itemToRepair.maxCondition)
+		{
+			return;
+		}
+		if (mustKnowBlueprint)
+		{
+			ItemDefinition itemDefinition = (info.isRedirectOf != null) ? info.isRedirectOf : info;
+			if (!player.blueprints.HasUnlocked(itemDefinition) && (!(itemDefinition.Blueprint != null) || itemDefinition.Blueprint.isResearchable))
+			{
+				return;
+			}
+		}
+		if (Interface.CallHook("OnItemRepair", player, itemToRepair) != null)
 		{
 			return;
 		}

@@ -10,8 +10,8 @@ namespace Rust.Ai.HTN.ScientistJunkpile
 	{
 		public delegate void WorldStateChangedEvent(ScientistJunkpileContext context, Facts fact, byte oldValue, byte newValue);
 
-		[ReadOnly]
 		[SerializeField]
+		[ReadOnly]
 		public bool _isWorldStateDirty;
 
 		[SerializeField]
@@ -25,8 +25,8 @@ namespace Rust.Ai.HTN.ScientistJunkpile
 		[ReadOnly]
 		private int _decompositionScore;
 
-		[ReadOnly]
 		[SerializeField]
+		[ReadOnly]
 		private List<PrimitiveTaskSelector> _debugPlan;
 
 		private static Stack<WorldStateInfo>[] _worldStateChanges;
@@ -51,8 +51,8 @@ namespace Rust.Ai.HTN.ScientistJunkpile
 		[ReadOnly]
 		public JunkPile Junkpile;
 
-		[ReadOnly]
 		[Header("Cover")]
+		[ReadOnly]
 		public CoverPointVolume CoverVolume;
 
 		[ReadOnly]

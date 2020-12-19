@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{4D83E2E2-58C5-4E01-ACEF-E0B14A8CEEE7}</ProjectGuid>
+    <ProjectGuid>{343C2DA8-9815-4AFF-852B-B1936BD6C1DE}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
@@ -991,6 +991,7 @@
     <Compile Include="IAIAgent.cs" />
     <Compile Include="IBatchingHandler.cs" />
     <Compile Include="IBlueprintsChanged.cs" />
+    <Compile Include="IceFence.cs" />
     <Compile Include="IClothingChanged.cs" />
     <Compile Include="IconSkin.cs" />
     <Compile Include="IconSkinPicker.cs" />
@@ -1375,6 +1376,8 @@
     <Compile Include="NeedsCursor.cs" />
     <Compile Include="NeedsMouseWheel.cs" />
     <Compile Include="NeighbourSocket.cs" />
+    <Compile Include="NeonMeshPaintableSource.cs" />
+    <Compile Include="NeonSign.cs" />
     <Compile Include="Network.Channel\Client.cs" />
     <Compile Include="Network.Channel\Server.cs" />
     <Compile Include="NetworkCryptography.cs" />
@@ -1563,6 +1566,7 @@
     <Compile Include="ProgressBarUI.cs" />
     <Compile Include="ProgressDoor.cs" />
     <Compile Include="Projectile.cs" />
+    <Compile Include="ProjectileTestSpawner.cs" />
     <Compile Include="ProjectileWeaponInformationPanel.cs" />
     <Compile Include="ProjectileWeaponMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1614,6 +1618,7 @@
     <Compile Include="RemoveChildObjectsAlongPath.cs" />
     <Compile Include="RenameSleepingBag.cs" />
     <Compile Include="RendererBatch.cs" />
+    <Compile Include="RendererEx.cs" />
     <Compile Include="RendererGrid.cs" />
     <Compile Include="RendererInfo.cs" />
     <Compile Include="RendererLOD.cs" />
@@ -2169,6 +2174,8 @@
     <Compile Include="SkinSet.cs" />
     <Compile Include="SkinSetCollection.cs" />
     <Compile Include="SkullTrophy.cs" />
+    <Compile Include="Sled.cs" />
+    <Compile Include="SledSeat.cs" />
     <Compile Include="SleepingBag.cs" />
     <Compile Include="SleepingBagButton.cs" />
     <Compile Include="SleepingBagClusterMapMarker.cs" />
@@ -2186,6 +2193,8 @@
     <Compile Include="SmartSwitch.cs" />
     <Compile Include="SmokeBomb.cs" />
     <Compile Include="SmokeGrenade.cs" />
+    <Compile Include="SnowballGun.cs" />
+    <Compile Include="SnowballGunProjectile.cs" />
     <Compile Include="SnowEffect.cs" />
     <Compile Include="SnowMachine.cs" />
     <Compile Include="SoccerBall.cs" />
@@ -2199,6 +2208,7 @@
     <Compile Include="SocketMod_EntityType.cs" />
     <Compile Include="SocketMod_HotSpot.cs" />
     <Compile Include="SocketMod_InWater.cs" />
+    <Compile Include="SocketMod_PhysicMaterial.cs" />
     <Compile Include="SocketMod_PlantCheck.cs" />
     <Compile Include="SocketMod_SphereCheck.cs" />
     <Compile Include="SocketMod_TerrainCheck.cs" />
@@ -2363,6 +2373,7 @@
     <Compile Include="TextureColorPicker.cs" />
     <Compile Include="TextureData.cs" />
     <Compile Include="ThrownWeapon.cs" />
+    <Compile Include="TickHistory.cs" />
     <Compile Include="TickInterpolator.cs" />
     <Compile Include="TimeBasedSoundSpread.cs" />
     <Compile Include="TimeCachedValue.cs" />

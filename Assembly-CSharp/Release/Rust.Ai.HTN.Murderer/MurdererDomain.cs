@@ -1772,22 +1772,22 @@ namespace Rust.Ai.HTN.Murderer
 
 		public OnPlanCompleted OnPlanCompletedEvent;
 
-		[SerializeField]
 		[Header("Context")]
+		[SerializeField]
 		private MurdererContext _context;
 
+		[Header("Navigation")]
 		[ReadOnly]
 		[SerializeField]
-		[Header("Navigation")]
 		private NavMeshAgent _navAgent;
 
 		[ReadOnly]
 		[SerializeField]
 		private Vector3 _spawnPosition;
 
-		[Header("Sensors")]
-		[ReadOnly]
 		[SerializeField]
+		[ReadOnly]
+		[Header("Sensors")]
 		private List<INpcSensor> _sensors = new List<INpcSensor>
 		{
 			new PlayersInRangeSensor
@@ -1829,9 +1829,9 @@ namespace Rust.Ai.HTN.Murderer
 			}
 		};
 
-		[Header("Reasoners")]
-		[SerializeField]
 		[ReadOnly]
+		[SerializeField]
+		[Header("Reasoners")]
 		private List<INpcReasoner> _reasoners = new List<INpcReasoner>
 		{
 			new EnemyPlayerLineOfSightReasoner
@@ -1905,8 +1905,8 @@ namespace Rust.Ai.HTN.Murderer
 		[SerializeField]
 		private bool _isFiring;
 
-		[SerializeField]
 		[ReadOnly]
+		[SerializeField]
 		public bool ReducedLongRangeAccuracy;
 
 		private HTNUtilityAiClient _aiClient;

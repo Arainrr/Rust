@@ -21,8 +21,8 @@ namespace Rust.Ai.HTN.Scientist
 		[SerializeField]
 		private byte[] _previousWorldState;
 
-		[SerializeField]
 		[ReadOnly]
+		[SerializeField]
 		private int _decompositionScore;
 
 		[ReadOnly]
@@ -48,8 +48,8 @@ namespace Rust.Ai.HTN.Scientist
 		[ReadOnly]
 		public AiLocationManager Location;
 
-		[Header("Cover")]
 		[ReadOnly]
+		[Header("Cover")]
 		public CoverPointVolume CoverVolume;
 
 		[ReadOnly]

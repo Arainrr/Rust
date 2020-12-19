@@ -25,8 +25,8 @@ namespace Rust.Modular
 		[SerializeField]
 		private BlendedLoopEngineSound blendedEngineLoops;
 
-		[SerializeField]
 		[Header("Skid")]
+		[SerializeField]
 		private SoundDefinition skidSoundLoop;
 
 		[SerializeField]
@@ -41,8 +41,8 @@ namespace Rust.Modular
 		[SerializeField]
 		private float skidMaxSlip = 25f;
 
-		[SerializeField]
 		[Header("Movement & Suspension")]
+		[SerializeField]
 		private SoundDefinition movementStartOneshot;
 
 		[SerializeField]
@@ -82,16 +82,16 @@ namespace Rust.Modular
 		[SerializeField]
 		private float waterSoundsMaxSpeed = 10f;
 
-		[Header("Brakes")]
 		[SerializeField]
+		[Header("Brakes")]
 		private SoundDefinition brakeSoundDef;
 
-		[Header("Lights")]
 		[SerializeField]
+		[Header("Lights")]
 		private SoundDefinition lightsToggleSound;
 
-		[SerializeField]
 		[Header("Wheels")]
+		[SerializeField]
 		private SoundDefinition tyreRollingSoundDef;
 
 		[SerializeField]

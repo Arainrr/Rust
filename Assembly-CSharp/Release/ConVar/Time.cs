@@ -5,12 +5,12 @@ namespace ConVar
 	[Factory("time")]
 	public class Time : ConsoleSystem
 	{
-		[ServerVar]
 		[Help("Pause time while loading")]
+		[ServerVar]
 		public static bool pausewhileloading = true;
 
-		[ServerVar]
 		[Help("Fixed delta time in seconds")]
+		[ServerVar]
 		public static float fixeddelta
 		{
 			get

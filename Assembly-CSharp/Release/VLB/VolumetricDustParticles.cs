@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace VLB
 {
-	[RequireComponent(typeof(VolumetricLightBeam))]
 	[HelpURL("http://saladgamer.com/vlb-doc/comp-dustparticles/")]
+	[RequireComponent(typeof(VolumetricLightBeam))]
 	[DisallowMultipleComponent]
 	[ExecuteInEditMode]
 	public class VolumetricDustParticles : MonoBehaviour

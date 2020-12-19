@@ -1238,14 +1238,15 @@ public class BaseEntity : BaseNetworkable, IOnParentSpawning, IPrefabPreProcess
 		uint num = msg.read.UInt32();
 		FileStorage.Type type = (FileStorage.Type)msg.read.UInt8();
 		string funcName = StringPool.Get(msg.read.UInt32());
-		byte[] array = FileStorage.server.Get(num, type, net.ID);
+		uint num2 = (msg.read.Unread > 0) ? msg.read.UInt32() : 0u;
+		byte[] array = FileStorage.server.Get(num, type, net.ID, num2);
 		if (array != null)
 		{
 			ClientRPCEx(new SendInfo(msg.connection)
 			{
 				channel = 2,
 				method = SendMethod.Reliable
-			}, null, funcName, num, (uint)array.Length, array);
+			}, null, funcName, num, (uint)array.Length, array, num2);
 		}
 	}
 

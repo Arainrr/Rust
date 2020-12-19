@@ -109,8 +109,8 @@ public class WorldItem : BaseEntity
 		}
 	}
 
-	[RPC_Server.IsVisible(3f)]
 	[RPC_Server]
+	[RPC_Server.IsVisible(3f)]
 	public void Pickup(RPCMessage msg)
 	{
 		if (msg.player.CanInteract() && item != null && allowPickup && Interface.CallHook("OnItemPickup", item, msg.player) == null)

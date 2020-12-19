@@ -397,7 +397,7 @@ public class ModularCar : BaseModularVehicle, TriggerHurtNotChild.IHurtTriggerUs
 		{
 			return false;
 		}
-		return serverTerrainHandler.CurrentGroundQuality == VehicleTerrainHandler.GroundQuality.Road;
+		return serverTerrainHandler.IsOnRoad;
 	}
 
 	public bool IsOnIce()

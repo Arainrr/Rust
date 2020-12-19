@@ -2287,19 +2287,6 @@ public class ConsoleGen
 		},
 		new ConsoleSystem.Command
 		{
-			Name = "signpause",
-			Parent = "antihack",
-			FullName = "antihack.signpause",
-			ServerAdmin = true,
-			Variable = true,
-			GetOveride = (() => ConVar.AntiHack.signpause.ToString()),
-			SetOveride = delegate(string str)
-			{
-				ConVar.AntiHack.signpause = str.ToFloat();
-			}
-		},
-		new ConsoleSystem.Command
-		{
 			Name = "speedhack_forgiveness",
 			Parent = "antihack",
 			FullName = "antihack.speedhack_forgiveness",
@@ -2439,6 +2426,19 @@ public class ConsoleGen
 			SetOveride = delegate(string str)
 			{
 				ConVar.AntiHack.terrain_timeslice = str.ToInt();
+			}
+		},
+		new ConsoleSystem.Command
+		{
+			Name = "tickhistorytime",
+			Parent = "antihack",
+			FullName = "antihack.tickhistorytime",
+			ServerAdmin = true,
+			Variable = true,
+			GetOveride = (() => ConVar.AntiHack.tickhistorytime.ToString()),
+			SetOveride = delegate(string str)
+			{
+				ConVar.AntiHack.tickhistorytime = str.ToFloat();
 			}
 		},
 		new ConsoleSystem.Command

@@ -76,6 +76,8 @@ public class BaseMountable : BaseCombatEntity
 
 	public virtual bool CanDrinkWhileMounted => true;
 
+	public virtual bool BlocksDoors => true;
+
 	public override bool OnRpcMessage(BasePlayer player, uint rpc, Message msg)
 	{
 		using (TimeWarning.New("BaseMountable.OnRpcMessage"))

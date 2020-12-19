@@ -47,8 +47,8 @@ public class BaseVehicleModule : BaseCombatEntity, IPrefabPreProcess
 
 	public LODLevel[] lodRenderers;
 
-	[HideInInspector]
 	[SerializeField]
+	[HideInInspector]
 	private List<ConditionalObject> conditionals;
 
 	[Header("Trigger Parent")]
